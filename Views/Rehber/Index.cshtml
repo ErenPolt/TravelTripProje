@@ -1,0 +1,28 @@
+﻿@using TravelTripProje.Models.Sınıflar
+    @model List<AdresBlog>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <br />
+            @foreach (var item in Model)
+            {
+                <img src="@item.Subject" alt="" style="height:300px; width:600px;" />
+                <h4>@item.Title</h4>
+                <p>@item.address</p>
+               
+            }
+
+
+        </div>
+    </div>
+</div>
+
+
+
+

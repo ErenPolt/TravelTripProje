@@ -1,0 +1,23 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model Hakkimizda
+
+
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hakkımzda Güncelleme Sayfası</h2>
+<br />
+<form method="post">
+
+    @Html.HiddenFor(x => x.Id, new { @class = "form-control" })
+    <label><b>Resim:</b></label>
+    @Html.TextBoxFor(x => x.imageUrl, new { @class = "form-control" })
+    <br />
+   <label><b>Açıklama:</b></label>
+    @Html.TextAreaFor(x=>x.Description,4,0, new {@class="form-control"})
+    <br />
+    <button class="btn btn-info">Güncelle</button> 
+  
+</form>

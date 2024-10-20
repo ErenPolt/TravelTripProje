@@ -1,0 +1,26 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model Yorumlar
+@{
+    ViewBag.Title = "UpdateComment";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yorum Güncelleme Sayfası</h2>
+<br />
+<form method="post">
+     
+    @Html.HiddenFor(x => x.Id, new { @class = "form-control" })
+    <label><b>Kullanıcı Adı:</b></label>
+    @Html.TextBoxFor(x => x.userName, new { @class = "form-control" })
+    <br />
+    <label><b>Mail Adresi</b></label>
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    <label><b>Yorum:</b></label>
+    @Html.TextAreaFor(x => x.Comment, 4, 0, new { @class = "form-control" })
+    <br />
+    
+    <button class="btn btn-info">Güncelle</button>
+</form>
+
+

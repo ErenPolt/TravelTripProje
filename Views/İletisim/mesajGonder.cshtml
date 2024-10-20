@@ -1,0 +1,32 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model İletisim
+
+@{
+    ViewBag.Title = "mesajGonder";
+    Layout = "~/Views/Shared/_TestContackLayout.cshtml";
+}
+
+<div class="form">
+    <form class="cmxform" id="contactForm" method="post">
+        <div>
+            @Html.TextBoxFor(x=>x.name, new {@class="form-control"})
+        </div>
+        <div>
+            <input type="text" placeholder="Mail Adresi:" name="Mail" required />
+        </div>
+        <div>
+            <input type="text" placeholder="Konu:" name="Subject" required />
+        </div>
+        <div>
+            <input type="submit" value="Gönder" />
+        </div>
+
+    </form>
+</div>
+<div class="form1">
+    <div>
+        <textarea placeholder="Mesajınız.." name="Message"></textarea>
+    </div>
+</div>
+<div class="clear"></div>
+

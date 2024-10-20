@@ -1,0 +1,32 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model List<AdresBlog>
+
+@{
+    ViewBag.Title = "RehberIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Otel Listesi</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Otel Adı</th>
+        <th>Adres</th>
+        <th>Resim</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Title</td>
+            <td>@item.address</td>
+            <td>@item.Subject</td>
+            <td><a href="/Admin/DeleteOtel/@item.Id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/UpdateOtel/@item.Id" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/CreateOtel/" class="btn btn-info">Otel Ekle</a>

@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<title>Admin Yönetim Paneli</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-blue w3-bar-block" style="width:10%">
+        <h3 class="w3-bar-item"><b><i>Menüler</i></b></h3>
+        <a href="/Default/Index/" class="w3-bar-item w3-button"><b>→Siteye Git→</b></a>
+        <a href="/Admin/AboutIndex/" class="w3-bar-item w3-button"><b>Hakkımızda</b></a>
+        <a href="/Admin/OtelIndex/" class="w3-bar-item w3-button"><b>Oteller</b></a>
+        <a href="/Admin/Index/" class="w3-bar-item w3-button"><b>Bloglar</b></a>
+        <a href="/Admin/CommentList/" class="w3-bar-item w3-button"><b>Yorumlar</b></a>
+        <a href="/Admin/iletisim/" class="w3-bar-item w3-button"><b>İletişim</b></a>
+
+        <a href="/Login/LoginIndex/" class="w3-bar-item w3-button"><b> ←Çıkış Yap←</b></a>
+
+    </div>
+    
+    <!-- Page Content -->
+    <div style="margin-left:10%">
+
+        <div class="w3-container w3-blue">
+            <h2 style="margin-left:600px"><i>Admin Yönetim Paneli</i></h2>
+        </div>
+
+        <br />
+        <div class="w3-container">
+            @RenderBody()
+        </div>
+
+    </div>
+
+</body>
+</html>

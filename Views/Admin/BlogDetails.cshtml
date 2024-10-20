@@ -1,0 +1,24 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model Yorumlar
+@{
+    ViewBag.Title = "BlogDetails";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mb-4">Blog Detay Sayfası</h2>
+
+<b>Şehir:</b> @Html.DisplayFor(x=>x.Blog.Title)
+<br />
+<br />
+
+<b>Yorum Gönderen:</b> @Html.DisplayFor(x=>x.userName)
+<br />
+<br />
+
+<b>Yorum Gönderen Mail Adresi:</b> @Html.DisplayFor(x => x.Mail)
+<br />
+<br />
+
+<b>Yorum:</b> @Html.DisplayFor(x => x.Comment)
+<br />
+<br />

@@ -1,0 +1,22 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model AdresBlog
+
+@{
+    ViewBag.Title = "UpdateOtel";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Otel Güncelleme Sayfası</h2>
+<br />
+<form method="post">
+    <label><b>Otel Adı:</b></label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label><b>Adres:</b></label>
+    @Html.TextBoxFor(x => x.address, new { @class = "form-control" })
+    <br />
+    <label><b>Resim:</b></label>
+    @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>

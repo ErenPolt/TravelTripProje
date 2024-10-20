@@ -1,0 +1,27 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model Blog
+
+
+@{
+    ViewBag.Title = "CreateBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Veri Giriş Sayfası</h2>
+<br />
+<form method="post">
+    <label><b>Başlık:</b></label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label><b>Tarih:</b></label>
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    <label><b>Açıklama:</b></label>
+    @Html.TextAreaFor(x => x.Description, 4,0 , new { @class = "form-control" })
+    <br />
+    <label><b>Resim:</b></label>
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>
+
